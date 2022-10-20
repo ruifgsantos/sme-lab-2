@@ -74,7 +74,7 @@ qualquer estado;
  <img src="appbar.png">
 </p>
 
-*Ao herdarmos os comportamentos de um **StatefulWidget**, temos obrigatoriamente de implementar o método **createState**. Tal como podemos observar, este método apenas retorna um objeto que irá conter o estado do nosso *widget*, que neste caso será um objeto do tipo **_CalculatorScreenState**. As classes que carregam o estado seguem sempre a seguinte nomenclatura: i) Começam com _ (underscore); ii) Assumem o nome do *widget* e finalizam com a palavra **State**;
+* Ao herdarmos os comportamentos de um **StatefulWidget**, temos obrigatoriamente de implementar o método **createState**. Tal como podemos observar, este método apenas retorna um objeto que irá conter o estado do nosso *widget*, que neste caso será um objeto do tipo **_CalculatorScreenState**. As classes que carregam o estado seguem sempre a seguinte nomenclatura: i) Começam com _ (underscore); ii) Assumem o nome do *widget* e finalizam com a palavra **State**;
 * A class **_CalculatorScreen** irá conter o estado do *widget* **CalculatorScreen**. Ao contrário dos **StatelessWidgets**, os **StatefulWidgets** tê o método **build** implementafo na classe que possui o seu estado.
 * Finalmente, no método **build** atribuimos o título à nossa **AppBar** tal como já foi indicado anteriormente. No entanto, como na classe do estado não temos acesso direto à **String** em questão, temos de ir buscar ao *widget* através da instrução **widget.title**.
 
