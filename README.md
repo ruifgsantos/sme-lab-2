@@ -141,11 +141,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
 Tal como podemos verificar, adicionámos ao atributo **body** da classe **Scaffold** uma coluna que irá comportar o nosso visor. Esta coluna recebe um *array* de *widgets* que por agora, irá conter apenas o nosso visor. Finalmente, passamos no construtor do nosso visor a **String** “0” para que o visor seja inicializado com esse mesmo valor.
 
+<p align="center">
+ <img src="appbar_screen.png">
+</p>
+
 ## Botão 
 
 A nossa calculadora terá dois tipos de botões: os simples e os duplos que são cerca de o dobro dos simples. Tal como ilustrado abaixo, estes botões podem também assumir cores diferentes:
 
-imagemaqui
+<p align="center">
+ <img src="zero.png">
+</p>
 
 Tomemos em consideração o pedaço de código abaixo que se refere ao *widget* **Button**:
 
@@ -308,6 +314,10 @@ class _CalculatorScreenState extends State<CalculatorSreen> {
 
 Se executarmos uma vez mais a nossa calculadora, iremos ter algo semelhante ao que se encontra ilustrado na figura abaixo.
 
+<p align="center">
+ <img src="buttons.png">
+</p>
+
 Para que a calculador fique funcional, só nos falta adicionar os comportamentos dos botões.
 
 ## BLoC
@@ -315,6 +325,9 @@ Para que a calculador fique funcional, só nos falta adicionar os comportamentos
 O sucesso de um software depende também muito da forma como o mesmo é arquitetado, ainda durante a sua fase de desenvolvimento poderão surgir alterações. Mesmo já na fase de produção, é necessário realizar operações de manutenção e provavelmente a acomodação novamente de outras funcionalidades. Não basta apenas pensarmos que a generalização da classe ou do método é suficiente, a forma como os diversos componentes
 comunicam é também importante. Ao nível arquitetural, o modelo de três camadas resolve os problemas:
 
+<p align="center">
+ <img src="bloc_architecture.png">
+</p>
 
 * A **camada de apresentação** lida apenas com a parte gráfica, isto é, com a apresentação de dados ou informações ao utilizador. É esta a camada que permite com que o utilizador interaja com o nosso *software*;
 * A **camada de domínio ou lógica de negócio** lida com os pedidos do utilizador e produz respostas tendo em conta esses pedidos;
@@ -354,6 +367,11 @@ class Calculator {
 Tal como temos vindo a fazer ao longo do laboratório, vamos perceber linha-a-linha o que está a ser feito no código:
 
 * Na propriedade **_controller** estamos a definir um objeto do tipo **StreamController**. Este objeto oferece um canal de comunicação **assíncrono** que tem uma entrada (**sink**) e uma saída (**stream**).
+
+<p align="center">
+ <img src="stream_controller.png">
+</p>
+
 * Outras propriedades estão relacionadas com o **_controller** e definidas como dois *getters*, um que dá acesso ao **sink(input)** e outro que dá acesso à **stream(output)**;
 * O método **onReceiveSymbol** recebe símbolos (1, 2, +, *) emitidos pelos botões e guardál-los na **String _content** que irá guardr o conteúdo a ser apresentado no visor da nossa calculadora. Seguidamente, o método **onEquals** tendo por base o conteúdo variável **_content**;
 * O método **dispose** que é responsável por encerrar o canal de comunicação através do método **close** do **StreamController**. Este método é invocado automaticamente por qualquer **StatefulWidget** assim que deixa de estar presente no ecrã. Como o nosso visor é um **StatefulWidget**, temos de fazer *override* desse método por forma a invocar o **dispose** do nosso BLoC.
@@ -546,6 +564,10 @@ class _CalculatorScreenState extends Satate<CalculatorScreen> {
 ~~~
 
 A navegação para o ecrã de histórico está implementada através de uma função anónima que invoca o método **push** da classe **Navigator**. Este método vai colocar um novo ecrã por cima do atual (da calculadora), ou seja, vamos construir uma **pilha** de ecrãs à medida que vamos navegando, quando quisermos retroceder, removemos o ecrã que estiver no topo da **pilha e acedemos ao seguinte**. Agora que já temos tudo preparado, podemos testar o mecanismo de navegação assim como verificar se o ecrã de histórico apresenta os cálculos guardados na lista **samples**.
+
+<p align="center">
+ <img src="historic.png">
+</p>
 
 ## Exercícios
 
