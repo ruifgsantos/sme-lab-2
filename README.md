@@ -15,6 +15,10 @@ negócio e o modelo de dados.
 
 No final da aula, é esperado que consigamos obter uma calculadora igual à que se encontra ilustrada na figura abaixo:
 
+<p align="center">
+ <img src="calculator.png">    
+</p>
+
 ## Ecrã Calculadora
 
 Vamos criar um projeto com nome **fcalculator** e seguidamente, vamos apagar tudo o que estiver dentro do ficheiro **main.dart** substituindo-o pelo seguinte:
