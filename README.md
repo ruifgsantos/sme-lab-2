@@ -32,7 +32,7 @@ class FCalculator extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-        return MAterialApp(
+        return MaterialApp(
             theme: ThemeData(
                 primarySwatch: Colors.blue
             ),
@@ -54,10 +54,10 @@ class CalculatorScreen extends StatelessWidget {
 class _CalculatorScreenState extens State<CalculatorScreen> {
 
     @override
-    Widget vuild(BuildContext context) {
+    Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(title: Text(widget.title))
-        )
+        );
     }
 }
 ~~~
