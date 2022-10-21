@@ -346,7 +346,7 @@ class Calculator {
 
     Sink get _input => _controller.sink;
 
-    Stream get _output => _controller.stream;
+    Stream get output => _controller.stream;
 
     void onReceiveSymbol(symbol) {
         _content = _content == null ? symbol : _content += symbol;
