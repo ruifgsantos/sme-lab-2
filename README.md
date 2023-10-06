@@ -166,7 +166,7 @@ class Button extends StatelesWidget {
     Button([
         super.key,
         required this.text,
-        required this.wifth,
+        required this.width,
         required this.height,
         this.color = Colors.black54,
         required this.onPressed
