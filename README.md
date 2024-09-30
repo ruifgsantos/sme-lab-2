@@ -41,7 +41,7 @@ class FCalculator extends StatelessWidget {
     }
 }
 
-class CalculatorScreen extends StatelessWidget {
+class CalculatorScreen extends StatefulWidget {
     
     final String title;
     
